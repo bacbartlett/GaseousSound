@@ -1,0 +1,15 @@
+.MuiTableRow-root:hover{
+    background-color: #f5f5f5;
+}
+
+.SongDisplay__Icon{
+    font-size: 18px;
+}
+
+.SongDisplay__AlbumArtwork{
+    width:40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

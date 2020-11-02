@@ -1,0 +1,36 @@
+.GenreDisplay__Background{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.GenreDisplay{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80%;
+}
+
+.SquareDisplay{
+    min-width: 300px;
+    margin: 7px;
+}
+
+.GenreSpecificPage__Albums{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80%;
+}
+
+.SpecificGenrePageDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topTitleDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

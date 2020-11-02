@@ -1,0 +1,55 @@
+.UploadPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.UploadFormContainer{
+    width: 80%;
+}
+
+.UploadFormInputDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.UploadFormTitleDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.UploadFormProperContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Upload__SongComp{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.uploadButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.AddSongButton{
+    width: 50%;
+}
+
+.songFileInputDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SongUpload{
+    display: flex;
+    justify-content: center;
+}
+
+.uploadButton{
+    margin-top: 20px;
+}

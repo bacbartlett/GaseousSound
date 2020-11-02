@@ -1,0 +1,75 @@
+body{
+    font-family: 'Karla', sans-serif;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 7fr repeat(3, 6fr) 17fr repeat(2, 6fr) 10fr 3fr;
+    background-color: #023a73;
+    height: 45px;
+    border-bottom: 1px solid black;
+}
+
+.NavBar__NavArea{
+    padding: 0px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-right: 1px solid #B0C0BC;
+    cursor: default;
+}
+
+.NavBar__NavArea.NavBar__NavProfile{
+    justify-content: space-evenly;
+}
+
+.NavBar__BorderOnLeft{
+    border-left: 1px solid #B0C0BC;
+}
+
+.NavBar__NavArea:hover{
+    background-color: #f3b17e;
+}
+
+.NavBar__NavLink{
+    color: white;
+    text-decoration: none;
+}
+
+.Navbar__SearchBar{
+    height: 45px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavBar__IconDiv{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+}
+
+.NavBar__SearchInput, .NavBar__SearchInput:focus{
+    width: 100%;
+    border: 0px;
+    background-color: whitesmoke;
+    outline-width: 0px;
+}
+
+.NavBar__CloudIcon{
+    display: flex;
+    justify-content: center;
+    padding-right: 15px;
+}
+
+.NavBar__ProfileImage{
+    width: 25px;
+    border-radius: 50%;
+}
+
+.NavBar__Dropdown{
+    background-color: #797270;
+}

@@ -1,0 +1,29 @@
+.SignUpPage__Container{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.SignUpPage__FormContainer{
+    max-width: 50%;
+    margin: 0px auto;
+    position: relative;
+    top: 40px;
+    padding: 5px 20px 20px 20px;
+    min-width: 542px;
+}
+
+.SignUpPage__SignUpForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.SignUpPage__ButtonDiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    margin-top: 5px;
+}

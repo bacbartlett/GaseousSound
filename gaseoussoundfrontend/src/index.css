@@ -1,0 +1,18 @@
+@import "./navbar.css";
+@import "./homepage.css";
+@import "./SignUpPage.css";
+@import "./MiniPlayer/MiniPlayer.css";
+@import "./SongDisplay/SongDisplay.css";
+@import "./GenrePage/GenrePage.css";
+@import "./AlbumPage/AlbumPage.css";
+@import "./UploadSong/UploadPage.css";
+
+body{
+    font-family: 'Alata', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+}
+
+

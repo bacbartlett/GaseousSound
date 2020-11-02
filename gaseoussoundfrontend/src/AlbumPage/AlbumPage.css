@@ -1,0 +1,27 @@
+.albumPageContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.albumPage{
+    margin-top: 7%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.albumPage__albumCover{
+    padding-right: 5%;
+
+}
+
+.albumPage__conver{
+    min-width: 450px;
+    min-height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}

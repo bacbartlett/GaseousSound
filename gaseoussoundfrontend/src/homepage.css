@@ -1,0 +1,92 @@
+.carouselContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: 220px;
+    /* border: 2px solid #042c5c; */
+    align-items: center;
+}
+
+.albumContainer{
+    height: 220px;
+    width: 150px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.album{
+    min-height: 150px;
+    min-width: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+
+.arrow-container{
+    width: 50px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel__arrow{
+    font-size: 45px;
+}
+
+.carousel__arrow:hover{
+    font-size: 50px;
+}
+
+.HomePage__Title{
+    /* display: flex;
+    justify-content: center; */
+
+    margin-left: 3.5%;
+}
+
+.HomePage__Container{
+    margin-top: 35px;
+}
+
+.Homepage__albumtitle{
+    font-size: medium;
+    margin-bottom: 5px;
+}
+
+.centerSomeText{
+    display: flex;
+}
+
+.footerDiv{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 1140px){
+    .Homepag__History{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1140px){
+.HomePage__Container{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+}

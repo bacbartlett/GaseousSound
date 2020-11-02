@@ -1,0 +1,135 @@
+.miniPlayer{
+    height: 75px;
+    width: 100%;
+    position: sticky;
+    bottom: 0vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1.5fr 1fr;
+    border-top: 1px solid black;
+    box-shadow: 0px -1px 2px #888888;
+    background-color: white;
+}
+
+.MiniPlayer__Section{
+    max-height: 75px;
+}
+
+.MiniPlayer__Controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MiniPlayer__ControlIcons{
+    font-size: 35px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+.MiniPlayer__VolumeDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.MiniPlayer__LengthAndBar{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.MiniPlayer__LengthContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3px;
+}
+
+.MiniPlayer__BarContainer{
+    margin-left: 2px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 1px;
+}
+
+
+.MiniPlayer__AlbumInfo{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.MiniPlayer__albumImageDiv{
+    grid-area: "albumArtwork";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MiniPlayer__infoDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.MiniPlayer__songTitleDiv{
+    
+}
+
+
+.MiniPlayer__artistNameDiv{
+    
+}
+
+.MiniPlayer__albumImage{
+    height: 60px;
+}
+
+.MiniPlayer__PlaylistAndLikeDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.MiniPlayer__SecondIconSet{
+    font-size: 25px;
+}
+
+.MiniPlayer__HeartRed{
+    color: #f47c23;
+}
+
+@media screen and (max-width: 1070px){
+    .miniPlayer{
+        grid-template-columns: .8fr 1fr 3fr 1.5fr 1fr;
+    }
+
+    .MiniPlayer__VolumeDiv{
+        margin-right: -10px;
+    }
+
+    .MiniPlayer__BarContainer{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .miniPlayer{
+        grid-template-columns: .8fr .7fr 3fr 1.5fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .miniPlayer{
+        grid-template-columns: .8fr 3fr 1.5fr 1fr;
+    }
+
+    .MiniPlayer__VolumeDiv{
+        display: none;
+    }
+}
