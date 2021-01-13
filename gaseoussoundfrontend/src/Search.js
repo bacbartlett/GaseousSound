@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useHistory } from "react-router-dom";
 
 const Search = (props) =>{
@@ -9,14 +9,27 @@ const Search = (props) =>{
         history.push("/search/" + search)
     }
 
-    const updateSearch = (e) =>{setSearch(e.target.value);}
+    const searchGoFactory = () =>{
+        return searchGo
+    }
+
+    const checkIfEnterAndGo = e =>{
+        const code = (e.keyCode ? e.keyCode : e.which);
+        if(code === 13){
+            searchGoFactory()()
+        }
+    }
+
+    const updateSearch = (e) =>{
+        setSearch(e.target.value);
+    }
 
     return(
         <div className="Navbar__SearchBar">
             <div onClick={searchGo} className="NavBar__IconDiv">
                 <i style={{"fontSize": "20px"}} className="fa fa-search"></i>
             </div>
-            <input value={search} onChange={updateSearch} className="NavBar__SearchInput"></input>
+            <input id="searchBar" value={search} onChange={updateSearch} onKeyPress={checkIfEnterAndGo} className="NavBar__SearchInput"></input>
         </div>
     )
 }

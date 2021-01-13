@@ -57,6 +57,7 @@ nav{
     border: 0px;
     background-color: whitesmoke;
     outline-width: 0px;
+    line-height: 1;
 }
 
 .NavBar__CloudIcon{
