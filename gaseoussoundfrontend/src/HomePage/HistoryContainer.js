@@ -11,6 +11,10 @@ const HistoryContainer = (props) =>{
         setRecentHistory(historySlice)
     }, [historySlice])
 
+    if(!historySlice.length){
+        return null
+    } 
+
     return <History recentHistory={recentHistory} />
 }
 
