@@ -56,6 +56,14 @@ const UploadSong = (props) => {
 
     }
 
+    const innerHandleSongTitles = (e) =>{
+        handleSongTitles(props.index, e.target.value)
+    }
+
+    const innerHandleFileUpload = (e) =>{
+        addSongAtPoint(props.index, e.target.files[0])
+    }
+
 
     
     return(
@@ -64,15 +72,17 @@ const UploadSong = (props) => {
                 <div className="UploadFormTitleDiv">
                     <h2>Upload A New Album</h2>
                 </div>
-                <div className="UploadFormProperContainer">
-                <div className="UploadFormInputDiv">
-                <TextField autoFocus value={albumTitle} onChange={handleAlbumTitleUpdate} id="AlbumTitle" label="Album Title" type="text" />
-                </div>
-                <div className="UploadFormInputDiv">
+                <div className="Upload__SongComp">
+            <TextField value={props.songTitle} onChange={innerHandleSongTitles} autoFocus label={"Album Title"} />
+            <div className="songFileInputDiv">
+            <div className="SongUploadLabel">
                 <h4>Album Artwork</h4>
-                <input onChange={handleAlbumArtwork} type="file" />
-                </div>
-                </div>
+            </div>
+            <div className="SongUpload">
+                <input onChange={innerHandleFileUpload} type="file" />
+            </div>
+            </div>
+        </div>
                 {numberOfSongs.map((el, ind) => <AddSong index={ind} songTitle={songTitles[ind]} songFile={songFiles[ind]} handleSongTitles={handleSongTitles} addSongAtPoint={addSongAtPoint} />)}
                 <div className="uploadButtonContainer">
                 <Button className="AddSongButton" color="primary" variant="outlined" onClick={addSongComponent}>Add Song</Button>
