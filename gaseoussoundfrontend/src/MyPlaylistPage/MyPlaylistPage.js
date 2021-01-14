@@ -8,7 +8,7 @@ const MyPlaylistPage = (props) =>{
         loaded = false;
     }
     return (
-        <>
+        <div className="GenreDisplay__Background">
         <div className="topTitleDiv">
             <h2>My Playlists</h2>
         </div>
@@ -18,7 +18,7 @@ const MyPlaylistPage = (props) =>{
                 <CircularProgress />}
             </Paper>
         </div>
-        </>
+        </div>
     )
 }
 

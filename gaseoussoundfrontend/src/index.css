@@ -15,4 +15,9 @@ main{
     min-height: 100vh;
 }
 
+.noResults{
+    display: flex;
+    justify-content: center;
+}
+
 

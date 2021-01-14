@@ -7,9 +7,16 @@ const Search = (props) =>{
     const [searchPerm, setSearchPer] = useState(props.match.params.searchTerm)
     const [searchResults, setSearchResults] = useState([]);
     const [loaded, setLoaded] = useState(false);
+    const [checking, setChecking] = useState(0)
+
+    useEffect(()=>{
+        setSearchPer(props.match.params.searchTerm)
+        setLoaded(false)
+    },[props.match.params.searchTerm])
 
 
     useEffect(()=>{
+        setChecking(checking + 1)
         const getData = async () =>{
             const res = await fetch(`${baseUrl}/api/search/${props.match.params.searchTerm}`);
             const data = await res.json();
@@ -23,11 +30,21 @@ const Search = (props) =>{
     }, [searchPerm])
 
     useEffect(()=>{
-        console.log(searchResults)
+        setChecking(checking + 1)
         if(searchResults.length > 0){
             setLoaded(true)
         }
     }, [searchResults]);
+
+    console.log("Checking:", checking)
+
+    if(loaded === false && checking % 2 === 0 && checking !== 0){
+        return(
+            <div className="noResults">
+            <h2>No Results Found</h2>
+            </div>
+        )
+    }
 
     return(
         <div className="searchResultsPageContainer">
