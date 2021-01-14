@@ -14,7 +14,7 @@ const MyPlaylistPage = (props) =>{
         </div>
         <div className="GenrePage__Container" >
             <Paper className="GenreDisplay">
-                {props.loaded ? (props.playlists.map((el, ind)=> <SquareDisplay key={el.ind} imageUrl={el.PlaylistSongJoins[0].Song.Album.artworkUrl} title={el.title} link={`/users/playlists/${el.id}`} />)) : 
+                {props.loaded ? (props.playlists.map((el, ind)=> <SquareDisplay key={el.ind} imageUrl={(el.PlaylistSongJoins.length ? el.PlaylistSongJoins[0].Song.Album.artworkUrl: "/emptyplaylist.png")} title={el.title} link={`/users/playlists/${el.id}`} />)) : 
                 <CircularProgress />}
             </Paper>
         </div>
