@@ -13,6 +13,7 @@ const LoginTab = (props) =>{
     const {handleClose} = props;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [autoLogin, setAutoLogin] = useState(false)
     const user = useSelector(state=>state.user);
     const dispatch = useDispatch();
     const handleEmail = (e) => setEmail(e.target.value);
@@ -26,9 +27,16 @@ const LoginTab = (props) =>{
         };
     }, [user])
 
+    useEffect(()=>{
+        if(autoLogin){
+            handleLogin()
+        }
+    }, [autoLogin])
+
     const demoUser = ()=>{
         setEmail("demoUser@example.com");
         setPassword("password");
+        setAutoLogin(true)
         return
     }
 
