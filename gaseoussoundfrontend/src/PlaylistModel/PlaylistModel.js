@@ -33,6 +33,7 @@ function SimpleDialog(props) {
   };
 
   const handleListItemClick = (value) => {
+    console.log(value)
     onClose(value);
   };
 
@@ -52,8 +53,17 @@ function SimpleDialog(props) {
 
       const newPlaylist = await newPlaylistRes.json();
       dispatch(createNewAddPlaylistAction(newPlaylist));
-      onClose("")
+      console.log("THIS IS WHAT WE ARE PASSING:", newPlaylist.id)
+      onClose(newPlaylist.id)
+      setNewPlaylistName("")
     }
+  }
+
+  const saveIfEnter = (e) =>{
+      let code = (e.keyCode ? e.keyCode : e.which);
+      if(code === 13) {
+        handleAddingNewPlaylist()
+      }
   }
 
   if(!props.playlists){
@@ -76,7 +86,7 @@ function SimpleDialog(props) {
 
         <ListItem autoFocus button onClick={() => handleAddingNewPlaylist()}>
         <i className="SongDisplay__Icon fa fa-plus"></i>
-          {addingNewPlaylist ? <input autoFocus onChange={handleUpdateOnInput} value={newPlaylistName} /> : <ListItemText primary="New Playlist" />}
+          {addingNewPlaylist ? <input autoFocus onChange={handleUpdateOnInput} value={newPlaylistName} onKeyPress={saveIfEnter} /> : <ListItemText primary="New Playlist" />}
         </ListItem>
       </List>
     </Dialog>
