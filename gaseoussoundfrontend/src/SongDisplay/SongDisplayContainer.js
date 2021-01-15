@@ -13,6 +13,13 @@ Each song should have:
 
 const SongDisplayContainer = (props) =>{
     const playlist = props.playlist
+    if(!playlist.length){
+        return(
+            <div className="noResults">
+                <h2>No Results</h2>
+            </div>
+            )
+    }
     return <SongDisplay playlist={playlist} width={props.width} />
 }
 

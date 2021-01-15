@@ -18,7 +18,7 @@ const SpecificPlaylistContainer = (props) =>{
     },[]);
 
     useEffect(()=>{
-        if(displayData && !(displayData === "loading") && displayData.PlaylistSongJoins && displayData.PlaylistSongJoins.map && displayData.PlaylistSongJoins[0] && displayData.PlaylistSongJoins[0].Song){
+        if(displayData && !(displayData === "loading") && displayData.PlaylistSongJoins){
             setSongs(displayData.PlaylistSongJoins.map(el=>el.Song));
             setTitle(displayData.title)
             setLoaded(true)
