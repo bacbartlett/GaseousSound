@@ -1,4 +1,4 @@
-import { CircularProgress } from "@material-ui/core";
+import { Button, CircularProgress } from "@material-ui/core";
 import React from "react";
 import SongDisplayContainer from "../../SongDisplay/SongDisplayContainer"
 
@@ -17,7 +17,10 @@ const SpecificPlaylistPage = (props) =>{
         <div>
             <div className="topTitleDiv">
             <h2>{props.title}</h2>
-        </div>
+                <div className="delteButton">
+                <Button  variant="outlined" color="secondary">Delete Playlist</Button>
+                </div>
+            </div>
     {props.loaded ? <SongDisplayContainer playlist={songs} /> : <CircularProgress />}
     </div>
     )

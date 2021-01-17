@@ -13,3 +13,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.delteButton{
+    position: absolute;
+    top: 16px;
+    right: 10px;
+
+}

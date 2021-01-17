@@ -33,7 +33,7 @@
 }
 
 .arrow-container{
-    width: 50px;
+    min-width: 47px;
     height: 220px;
     display: flex;
     align-items: center;
@@ -45,6 +45,8 @@
 
 .carousel__arrow:hover{
     font-size: 50px;
+    margin-right: -5px;
+    margin-left: 1px;
 }
 
 .HomePage__Title{

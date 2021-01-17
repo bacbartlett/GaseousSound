@@ -25,7 +25,7 @@ const SpecificPlaylistContainer = (props) =>{
         }
     },[displayData]);
 
-    return <SpecificPlaylistPage title={title} songs={songs} loaded={loaded} />
+    return <SpecificPlaylistPage playlistId={props.match.params.playlistId} title={title} songs={songs} loaded={loaded} />
 }
 
 export default SpecificPlaylistContainer;
